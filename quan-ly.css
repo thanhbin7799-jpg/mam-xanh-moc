@@ -1,0 +1,264 @@
+:root {
+  --ink: #241b16;
+  --muted: #725f54;
+  --paper: #fff9f0;
+  --cream: #f4ead9;
+  --leaf: #29614b;
+  --tomato: #c9462f;
+  --gold: #d49a3a;
+  --white: #ffffff;
+  --shadow: 0 18px 45px rgba(36, 27, 22, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.manager-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px clamp(18px, 5vw, 64px);
+  color: var(--white);
+  background: var(--leaf);
+}
+
+.manager-header p,
+.manager-header h1 {
+  margin: 0;
+}
+
+.manager-header p {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.manager-header h1 {
+  margin-top: 6px;
+  font-size: clamp(30px, 5vw, 50px);
+  line-height: 1.05;
+}
+
+.manager-header a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--gold);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.manager-shell {
+  display: grid;
+  gap: 22px;
+  padding: 28px clamp(18px, 5vw, 64px) 52px;
+}
+
+.panel {
+  padding: 22px;
+  border: 1px solid rgba(36, 27, 22, 0.1);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.panel-heading {
+  margin-bottom: 18px;
+}
+
+.panel-heading h2 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.panel-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.manager-search,
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid rgba(36, 27, 22, 0.16);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: var(--paper);
+  font: inherit;
+}
+
+.content-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-weight: 900;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.actions,
+.row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.primary {
+  color: var(--white);
+  background: var(--tomato);
+}
+
+.secondary {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.danger {
+  color: var(--white);
+  background: #9b2f25;
+}
+
+.content-list,
+.booking-list {
+  display: grid;
+  gap: 12px;
+}
+
+.content-row,
+.booking-row {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(36, 27, 22, 0.09);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+
+.content-row img {
+  width: 86px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.content-row h3,
+.booking-row h3 {
+  margin: 0 0 4px;
+}
+
+.content-row p,
+.booking-row p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.price {
+  color: var(--leaf);
+  font-weight: 900;
+}
+
+.booking-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.empty {
+  margin: 0;
+  padding: 18px;
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--cream);
+  font-weight: 800;
+}
+
+.clear-bookings {
+  margin-top: 14px;
+}
+
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  max-width: min(340px, calc(100vw - 36px));
+  padding: 14px 16px;
+  border-radius: 8px;
+  color: var(--white);
+  background: var(--leaf);
+  box-shadow: var(--shadow);
+  transform: translateY(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .manager-header,
+  .content-row,
+  .booking-row {
+    grid-template-columns: 1fr;
+  }
+
+  .manager-header {
+    display: grid;
+  }
+
+  .content-form {
+    grid-template-columns: 1fr;
+  }
+
+  .content-row {
+    align-items: start;
+  }
+
+  .content-row img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}

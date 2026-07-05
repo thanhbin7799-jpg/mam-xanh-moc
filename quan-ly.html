@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý nội dung - Mâm Xanh Mộc</title>
+  <link rel="stylesheet" href="quan-ly.css">
+</head>
+<body>
+  <header class="manager-header">
+    <div>
+      <p>Mâm Xanh Mộc</p>
+      <h1>Quản lý nội dung</h1>
+    </div>
+    <a href="index.html">Xem trang web</a>
+  </header>
+
+  <main class="manager-shell">
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Tìm kiếm nội dung</h2>
+        <p>Tìm món theo tên, danh mục, mô tả hoặc giá.</p>
+      </div>
+      <input class="manager-search" type="search" placeholder="Nhập từ khóa cần tìm...">
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Thêm hoặc sửa món</h2>
+        <p>Món lưu tại đây sẽ hiển thị ở trang thực đơn.</p>
+      </div>
+
+      <form class="content-form">
+        <input type="hidden" name="id">
+        <label>
+          Tên món
+          <input type="text" name="name" placeholder="Ví dụ: Bún riêu cua" required>
+        </label>
+        <label>
+          Danh mục
+          <select name="category" required>
+            <option value="main">Món chính</option>
+            <option value="street">Đường phố</option>
+            <option value="dessert">Tráng miệng</option>
+          </select>
+        </label>
+        <label>
+          Giá
+          <input type="text" name="price" placeholder="35.000đ" required>
+        </label>
+        <label>
+          Link ảnh
+          <input type="url" name="image" placeholder="https://..." required>
+        </label>
+        <label class="full">
+          Mô tả
+          <textarea name="description" rows="4" placeholder="Mô tả ngắn về món ăn" required></textarea>
+        </label>
+        <div class="actions full">
+          <button class="primary save-content" type="submit">Lưu món</button>
+          <button class="secondary reset-content" type="button">Làm mới</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Danh sách món ăn</h2>
+        <p>Sửa hoặc xóa món trong thực đơn.</p>
+      </div>
+      <div class="content-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Đặt bàn đã gửi</h2>
+        <p>Các yêu cầu đặt bàn từ trang chính.</p>
+      </div>
+      <div class="booking-list"></div>
+      <button class="danger clear-bookings" type="button">Xóa tất cả đặt bàn</button>
+    </section>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="quan-ly.js"></script>
+</body>
+</html>
