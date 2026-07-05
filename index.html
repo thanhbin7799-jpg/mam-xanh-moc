@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mâm Xanh Mộc</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Mâm Xanh Mộc">
+      <span class="logo-mark" aria-hidden="true">
+        <span class="steam steam-one"></span>
+        <span class="steam steam-two"></span>
+        <span class="bowl"></span>
+      </span>
+      <span class="brand-text">
+        <strong>Mâm Xanh Mộc</strong>
+        <small>Bếp Việt bình dân</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#home">Trang chủ</a>
+      <a href="#menu">Thực đơn</a>
+      <a href="#story">Kể chuyện</a>
+      <a href="#space">Không gian</a>
+      <a href="#booking">Đặt bàn</a>
+      <a href="#contact">Liên hệ</a>
+      <a href="quan-ly.html">Quản lý</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Bếp Việt đương đại</p>
+        <h1>Mâm Xanh Mộc</h1>
+        <p class="hero-copy">Bữa ăn Việt bình dân, ấm bụng và đẹp mắt, dành cho những buổi sáng thong thả, bữa trưa nhanh gọn hoặc tối sum vầy cùng người thân.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#menu">Xem thực đơn</a>
+          <a class="button ghost" href="#booking">Đặt bàn</a>
+        </div>
+        <div class="hero-highlights" aria-label="Ưu điểm nổi bật">
+          <span>Mở cửa 09:00 - 22:00</span>
+          <span>Giá từ 18.000đ</span>
+          <span>12 món Việt</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Món nổi bật hôm nay">
+        <img src="https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=900&q=80" alt="Đĩa cơm tấm sườn nướng">
+        <div class="hero-card-body">
+          <span class="tag">Món nổi bật</span>
+          <h2>Cơm tấm sườn nướng</h2>
+          <p>Sườn ướp vừa miệng, cơm tấm nóng, bì chả trứng và nước mắm pha nhà làm.</p>
+          <div class="hero-price">
+            <strong>40.000đ</strong>
+            <a href="#booking">Đặt ngay</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="home-strip" aria-label="Dịch vụ nhanh">
+      <div>
+        <span>01</span>
+        <strong>Bữa sáng</strong>
+        <p>Phở, cháo, bánh mì nóng cho ngày mới nhẹ nhàng.</p>
+      </div>
+      <div>
+        <span>02</span>
+        <strong>Bữa trưa</strong>
+        <p>Cơm tấm, bún chả, mì Quảng nhanh gọn mà đủ chất.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <strong>Bữa tối</strong>
+        <p>Không gian ấm để cả nhà cùng thưởng thức món Việt.</p>
+      </div>
+    </section>
+
+    <section class="quick-stats" aria-label="Điểm nổi bật">
+      <div>
+        <strong>30+</strong>
+        <span>Món đặc trưng</span>
+      </div>
+      <div>
+        <strong>100%</strong>
+        <span>Nguyên liệu tươi</span>
+      </div>
+      <div>
+        <strong>4.9</strong>
+        <span>Đánh giá thực khách</span>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Thực đơn hôm nay</p>
+        <h2>Món ngon được yêu thích</h2>
+      </div>
+
+      <div class="menu-tools">
+        <label class="search-box">
+          <span>Tìm món</span>
+          <input class="menu-search" type="search" placeholder="Nhập tên món, ví dụ: phở, cơm tấm...">
+        </label>
+        <div class="filters" aria-label="Lọc món ăn">
+          <button class="filter active" type="button" data-filter="all">Tất cả</button>
+          <button class="filter" type="button" data-filter="main">Món chính</button>
+          <button class="filter" type="button" data-filter="street">Đường phố</button>
+          <button class="filter" type="button" data-filter="dessert">Tráng miệng</button>
+        </div>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card" data-category="main">
+          <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=900&q=80" alt="Tô phở bò nóng với rau thơm">
+          <div class="dish-body">
+            <span class="tag">Món chính</span>
+            <h3>Phở bò truyền thống</h3>
+            <p>Nước dùng ninh chậm, bánh phở mềm, thịt bò thái mỏng và hương quế hồi ấm áp.</p>
+            <div class="dish-meta">
+              <strong>45.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích phở bò">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="street">
+          <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80" alt="Bánh mì Việt Nam giòn nóng">
+          <div class="dish-body">
+            <span class="tag">Đường phố</span>
+            <h3>Bánh mì đặc biệt</h3>
+            <p>Vỏ bánh giòn, pate béo nhẹ, đồ chua tươi và nước sốt nhà làm đậm vị.</p>
+            <div class="dish-meta">
+              <strong>25.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích bánh mì">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="main">
+          <img src="https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=900&q=80" alt="Đĩa cơm tấm sườn nướng">
+          <div class="dish-body">
+            <span class="tag">Món chính</span>
+            <h3>Cơm tấm sườn nướng</h3>
+            <p>Sườn ướp mật ong, cơm tấm dẻo, bì chả trứng và chén nước mắm pha cân bằng.</p>
+            <div class="dish-meta">
+              <strong>40.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích cơm tấm">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="dessert">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80" alt="Ly chè mát với trái cây">
+          <div class="dish-body">
+            <span class="tag">Tráng miệng</span>
+            <h3>Chè trái cây mát lành</h3>
+            <p>Vị ngọt dịu, nước cốt dừa thơm và các loại topping giòn mềm vui miệng.</p>
+            <div class="dish-meta">
+              <strong>20.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích chè trái cây">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="main">
+          <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=900&q=80" alt="Tô bún bò Huế cay thơm">
+          <div class="dish-body">
+            <span class="tag">Món chính</span>
+            <h3>Bún bò Huế</h3>
+            <p>Nước dùng đậm đà, thoảng mùi sả, ăn cùng thịt bò mềm và rau sống giòn tươi.</p>
+            <div class="dish-meta">
+              <strong>45.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích bún bò Huế">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="street">
+          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=900&q=80" alt="Đĩa gỏi cuốn tươi chấm nước sốt">
+          <div class="dish-body">
+            <span class="tag">Đường phố</span>
+            <h3>Gỏi cuốn tôm thịt</h3>
+            <p>Bánh tráng mỏng, rau thơm, bún tươi, tôm thịt và nước chấm đậu phộng béo nhẹ.</p>
+            <div class="dish-meta">
+              <strong>30.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích gỏi cuốn">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="main">
+          <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=900&q=80" alt="Đĩa bún chả với thịt nướng và nước mắm">
+          <div class="dish-body">
+            <span class="tag">Món chính</span>
+            <h3>Bún chả Hà Nội</h3>
+            <p>Thịt nướng than hoa, chả viên thơm, bún trắng và chén nước mắm chua ngọt hài hòa.</p>
+            <div class="dish-meta">
+              <strong>40.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích bún chả">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="dessert">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80" alt="Bánh flan mềm mịn với caramel">
+          <div class="dish-body">
+            <span class="tag">Tráng miệng</span>
+            <h3>Bánh flan caramel</h3>
+            <p>Mềm mịn, thơm trứng sữa, phủ caramel hơi đắng nhẹ để vị ngọt không bị gắt.</p>
+            <div class="dish-meta">
+              <strong>18.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích bánh flan">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="main">
+          <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=80" alt="Đĩa mì Quảng với tôm thịt và rau sống">
+          <div class="dish-body">
+            <span class="tag">Món chính</span>
+            <h3>Mì Quảng tôm thịt</h3>
+            <p>Sợi mì vàng mềm, nước dùng sánh nhẹ, ăn cùng bánh tráng mè và rau thơm miền Trung.</p>
+            <div class="dish-meta">
+              <strong>42.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích mì Quảng">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="street">
+          <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80" alt="Đĩa bánh xèo vàng giòn với rau sống">
+          <div class="dish-body">
+            <span class="tag">Đường phố</span>
+            <h3>Bánh xèo giòn rụm</h3>
+            <p>Vỏ bánh vàng thơm, nhân tôm thịt giá đỗ, cuốn rau sống và chấm nước mắm chua ngọt.</p>
+            <div class="dish-meta">
+              <strong>35.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích bánh xèo">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="main">
+          <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=900&q=80" alt="Tô cháo gà nóng với hành lá">
+          <div class="dish-body">
+            <span class="tag">Món chính</span>
+            <h3>Cháo gà xé phay</h3>
+            <p>Cháo nấu nhừ, thịt gà mềm, thêm hành tiêu và rau răm cho vị ấm bụng, dễ ăn.</p>
+            <div class="dish-meta">
+              <strong>30.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích cháo gà">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="dessert">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80" alt="Kem dừa mát lạnh trong ly">
+          <div class="dish-body">
+            <span class="tag">Tráng miệng</span>
+            <h3>Kem dừa non</h3>
+            <p>Kem mát, thơm vị dừa, thêm đậu phộng rang và dừa sợi để kết thúc bữa ăn nhẹ nhàng.</p>
+            <div class="dish-meta">
+              <strong>22.000đ</strong>
+              <button type="button" class="favorite" aria-label="Yêu thích kem dừa">♡</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="story-image" aria-hidden="true"></div>
+      <div class="story-content">
+        <p class="eyebrow">Từ căn bếp nhỏ</p>
+        <h2>Kể chuyện bằng hương vị quê nhà</h2>
+        <p>Mâm Xanh Mộc bắt đầu từ những bữa cơm gia đình: nồi nước dùng thơm từ sáng sớm, mâm rau vừa rửa còn mát tay và tiếng gọi nhau ngồi vào bàn khi món ăn còn nóng.</p>
+        <ul>
+          <li>Mỗi món giữ lại một ký ức thân quen của bếp Việt.</li>
+          <li>Gia vị được nêm vừa miệng để ai cũng dễ thưởng thức.</li>
+          <li>Không gian ấm áp cho bữa sáng, bữa chiều và bữa tối cùng người thân.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="space" class="section space">
+      <div class="section-heading">
+        <p class="eyebrow">Không gian quán</p>
+        <h2>Ấm cúng để thưởng thức, tiện lợi để mua mang về</h2>
+        <p>Quán được bố trí thoáng, sạch và gần gũi, phù hợp cho khách ghé ăn sáng, ăn trưa, ăn tối hoặc đặt món mang về.</p>
+      </div>
+
+      <div class="space-layout">
+        <article class="space-feature">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1100&q=85" alt="Không gian quán ăn ấm cúng với bàn ghế gỗ">
+          <div>
+            <span>Ăn tại quán</span>
+            <h3>Bàn ghế gọn gàng, ánh sáng ấm</h3>
+            <p>Không gian vừa đủ riêng tư cho gia đình, nhóm bạn và khách văn phòng ghé dùng bữa trong ngày.</p>
+          </div>
+        </article>
+
+        <div class="space-cards">
+          <article>
+            <strong>Quầy món nóng</strong>
+            <p>Món được chuẩn bị nhanh, giữ nóng và trình bày sạch sẽ trước khi phục vụ.</p>
+          </article>
+          <article>
+            <strong>Mua mang về</strong>
+            <p>Đóng gói gọn, tiện cầm đi làm, đi học hoặc đặt cho cả nhóm.</p>
+          </article>
+          <article>
+            <strong>Nhóm đông người</strong>
+            <p>Có thể giữ bàn trước cho sinh nhật, họp mặt hoặc bữa tối gia đình.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking">
+      <div>
+        <p class="eyebrow">Đặt bàn</p>
+        <h2>Giữ chỗ cho bữa ăn kế tiếp</h2>
+        <p>Chọn số khách và thời gian, chúng tôi sẽ chuẩn bị bàn phù hợp cho bạn.</p>
+      </div>
+      <form class="booking-form">
+        <label>
+          Họ tên
+          <input type="text" name="name" placeholder="Nguyễn An" required>
+        </label>
+        <label>
+          Số khách
+          <select name="guests">
+            <option>2 khách</option>
+            <option>4 khách</option>
+            <option>6 khách</option>
+            <option>8 khách</option>
+          </select>
+        </label>
+        <label>
+          Buổi
+          <select name="session">
+            <option>Sáng</option>
+            <option>Chiều</option>
+            <option>Tối</option>
+          </select>
+        </label>
+        <label>
+          Thời gian
+          <input type="time" name="time" value="09:00" min="09:00" max="22:00" required>
+        </label>
+        <button class="button primary" type="submit">Gửi yêu cầu</button>
+      </form>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <p class="eyebrow">Liên hệ</p>
+        <h2>Ghé bếp hoặc nhắn cho chúng tôi</h2>
+        <p>Chúng tôi luôn sẵn sàng giữ bàn, tư vấn món phù hợp và chuẩn bị thực đơn cho nhóm đông người.</p>
+      </div>
+      <div class="contact-list">
+        <div>
+          <span>Địa chỉ</span>
+          <strong>24 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</strong>
+        </div>
+        <div>
+          <span>Điện thoại</span>
+          <strong>090 123 4567</strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <strong>hello@mamxanhmoc.vn</strong>
+        </div>
+        <div>
+          <span>Giờ mở cửa</span>
+          <strong>09:00 - 22:00 mỗi ngày</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Mâm Xanh Mộc. Ẩm thực Việt trong từng khoảnh khắc.</p>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
